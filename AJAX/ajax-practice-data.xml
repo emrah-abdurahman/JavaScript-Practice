@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<movies>
+  <movie>
+    <title></title>
+    <distributor></distributor>
+    <year></year>
+    <runtime></runtime>
+  </movie>
+
+  <movie>
+    <title></title>
+    <distributor></distributor>
+    <year></year>
+    <runtime></runtime>
+  </movie>
+</movies>
