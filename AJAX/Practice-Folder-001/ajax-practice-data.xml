@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<movies>
+  <movie>
+    <title>The Matrix</title>
+    <distributor>Warner Bros.</distributor>
+    <year>1999</year>
+    <runtime>136 minutes</runtime>
+  </movie>
+
+  <movie>
+    <title>The Terminator</title>
+    <distributor>Orion Pictures</distributor>
+    <year>1984</year>
+    <runtime>107 minutes</runtime>
+  </movie>
+
+  <movie>
+    <title>Predator</title>
+    <distributor>20th Century Fox</distributor>
+    <year>1987</year>
+    <runtime>107 minutes</runtime>
+  </movie>
+
+  <movie>
+    <title>Inception</title>
+    <distributor>Warner Bros. Pictures</distributor>
+    <year>2010</year>
+    <runtime>148 minutes</runtime>
+  </movie>
+</movies>
