@@ -25,14 +25,16 @@
             return false;
           }
           httpRequest.onreadystatechange = alertContents;
-          httpRequest.open("GET", "test.html");
+          httpRequest.open("GET", "test.xml");
           httpRequest.send();
         }
 
         function alertContents() {
           if (httpRequest.readyState === XMLHttpRequest.DONE) {
             if (httpRequest.status === 200) {
-              alert(httpRequest.responseText);
+              var xmldoc = httpRequest.responseXML;
+              var root_node = xmldoc.getElementsByTagName("root").item(0);
+              alert(root_node.firstChild.data);
             } else {
               alert("There was a problem with the request.");
             }
