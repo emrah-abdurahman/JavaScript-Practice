@@ -12,6 +12,7 @@ function makeRequest() {
   xmlhttp.onreadystatechange = function () {
     getMovies(this); // Telling the XMLHttpRequest object which function will handle the response
   };
+  xmlhttp.setRequestHeader("Content-Type", "application/xml"); // Setting the request header to the content type of "application/xml". This is required for this to work in IE
   xmlhttp.open("GET", "http://localhost:5500/ajax-practice-data.xml", true); // Initializing the newly created request
   xmlhttp.send(); // Sending the request to my "localhost" server. The server is the "Live Server" Visual Studio Code extension listening on port 5500
 }
