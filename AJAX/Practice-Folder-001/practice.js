@@ -10,8 +10,7 @@ const moviesList = document.querySelector("#movies-list");
 function makeRequest() {
   const xmlhttp = new XMLHttpRequest(); // Creating an XMLHttpRequest object to make an AJAX request with it
   xmlhttp.onreadystatechange = function () {
-    // Telling the XMLHttpRequest object which function will handle the response
-    getMovies(this);
+    getMovies(this); // Telling the XMLHttpRequest object which function will handle the response
   };
   xmlhttp.open("GET", "http://localhost:5500/ajax-practice-data.xml", true); // Initializing the newly created request
   xmlhttp.send(); // Sending the request to my "localhost" server. The server is the "Live Server" Visual Studio Code extension listening on port 5500
@@ -29,8 +28,8 @@ function getMovies(xml) {
 // This function will run if we receive a successful AJAX response with the XML data. It will populate the HTML list with the data
 function populateMoviesList(xmlData) {
   const movieTags = xmlData.getElementsByTagName("movie"); // Get all the "movie" tags from the XML document
+  // Loop through the HTMLCollection and populate the movies list HTML element
   for (let i = 0; i < movieTags.length; i++) {
-    // Loop through the HTMLCollection and populate the movies list HTML element
     const title = movieTags[i].childNodes[1].innerHTML;
     const distributor = movieTags[i].childNodes[3].innerHTML;
     const year = movieTags[i].childNodes[5].innerHTML;
