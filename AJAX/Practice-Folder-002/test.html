@@ -5,11 +5,27 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>AJAX Practice</title>
+    <style>
+      div {
+        margin-bottom: 20px;
+      }
+    </style>
   </head>
   <body>
     <!-- https://developer.mozilla.org/en-US/docs/Web/Guide/AJAX/Getting_Started -->
     <!-- This is a practice from the link above -->
-    <button id="ajaxButton" type="button">Make a request</button>
+    <div>
+      <button id="ajaxButton" type="button">Make a request</button>
+    </div>
+    <div>
+      <label
+        >Your name:
+        <input type="text" id="ajaxTextbox" />
+      </label>
+      <span id="ajaxButton" style="cursor: pointer; text-decoration: underline">
+        Make a request
+      </span>
+    </div>
     <script>
       (function () {
         var httpRequest;
