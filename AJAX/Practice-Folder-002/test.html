@@ -14,9 +14,9 @@
   <body>
     <!-- https://developer.mozilla.org/en-US/docs/Web/Guide/AJAX/Getting_Started -->
     <!-- This is a practice from the link above -->
-    <div>
+    <!-- <div>
       <button id="ajaxButton" type="button">Make a request</button>
-    </div>
+    </div> -->
     <div>
       <label
         >Your name:
@@ -29,11 +29,12 @@
     <script>
       (function () {
         var httpRequest;
-        document
-          .getElementById("ajaxButton")
-          .addEventListener("click", makeRequest);
+        document.getElementById("ajaxButton").onclick = function () {
+          var userName = document.getElementById("ajaxTextbox").value;
+          makeRequest("test.php", userName);
+        };
 
-        function makeRequest() {
+        function makeRequest(url, userName) {
           httpRequest = new XMLHttpRequest();
 
           if (!httpRequest) {
@@ -41,16 +42,19 @@
             return false;
           }
           httpRequest.onreadystatechange = alertContents;
-          httpRequest.open("GET", "test.xml");
-          httpRequest.send();
+          httpRequest.open("POST", url);
+          httpRequest.setRequestHeader(
+            "Content-Type",
+            "application/x-www-form-urlencoded"
+          );
+          httpRequest.send("userName=" + encodeURIComponent(userName));
         }
 
         function alertContents() {
           if (httpRequest.readyState === XMLHttpRequest.DONE) {
             if (httpRequest.status === 200) {
-              var xmldoc = httpRequest.responseXML;
-              var root_node = xmldoc.getElementsByTagName("root").item(0);
-              alert(root_node.firstChild.data);
+              var response = JSON.parse(httpRequest.responseText);
+              alert(response.computedString);
             } else {
               alert("There was a problem with the request.");
             }
