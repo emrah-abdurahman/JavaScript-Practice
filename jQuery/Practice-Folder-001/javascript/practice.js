@@ -1,5 +1,10 @@
 $(":header").addClass("headline");
-$("li[id!='one']").hide().delay(500).fadeIn(1400);
+
+$(function () {
+  $("ul").before("<p class='notice'>Just updated</p>");
+  $("li:contains('pine')").text("almonds");
+});
+
 $("li").on("click", function () {
   $(this).remove();
 });
