@@ -1,12 +1,21 @@
 $(function () {
-  $("li").on("click", function (e) {
-    $("li span").remove();
-    let date = new Date();
-    date.setTime(e.timeStamp);
-    let clicked = date.toDateString();
-    $(this).append("<span class='date'>" + clicked + " " + e.type + "</span");
-  });
+  const $windowHeight = $(window).height();
+  const $windowWidth = $(window).width();
+  console.log("Window Height:", $windowHeight);
+  console.log("Window Width:", $windowWidth);
 
+  const $documentHeight = $(document).height();
+  const $documentWidth = $(document).width();
+  console.log("Document Height:", $documentHeight);
+  console.log("Document Width:", $documentWidth);
+
+  // $("li").on("click", function (e) {
+  //   $("li span").remove();
+  //   let date = new Date();
+  //   date.setTime(e.timeStamp);
+  //   let clicked = date.toDateString();
+  //   $(this).append("<span class='date'>" + clicked + " " + e.type + "</span");
+  // });
   // let ids = "";
   // let $listItems = $("li");
   // $listItems.on("mouseover click", function () {
