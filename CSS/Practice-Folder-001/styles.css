@@ -1,114 +1,37 @@
 body {
-  background-image: url("../images/Flourishtry-Background-Main.jpg");
-  background-size: 100%;
-  background-repeat: no-repeat;
   margin: 0;
 }
 
 #header-container {
-  display: grid;
-  grid-template-columns: 1fr 2fr 1fr;
   background-color: black;
-  /* border-radius: 0 0 20px 20px; */
-  margin: 0 5% 0 5%;
-}
-
-#header-item1 {
+  border: 2px solid red;
   font-family: "Kaushan Script", cursive;
-  font-size: 35px;
-  margin: auto 0 auto 0;
-  padding: 5px 20px;
+  margin: 0 5% 0 5%;
+  text-transform: uppercase;
 }
 
-#home-link {
+#header-container #header-item1 {
+  width: 25%;
+  border: 2px solid red;
+  float: left;
+  text-align: center;
   text-decoration: none;
-  font-weight: bold;
-  color: white;
 }
 
-.home-link-mouse-over {
-  color: lightseagreen !important;
-  transition: color 1s;
+#header-container #header-item2 {
+  display: inline-block;
 }
 
-.home-link-mouse-out {
-  color: white !important;
-  transition: color 1s;
-}
-
-#header-item2 {
-  display: grid;
-  justify-content: center;
+#header-item2 ul {
   border: 2px solid red;
 }
 
-#header-item2 ul li {
-  /* border: 2px solid red; */
-  font-family: "Kaushan Script", cursive;
-  font-weight: bold;
-  text-transform: uppercase;
-  display: inline-block;
-  font-size: 20px;
-}
-
-#header-item2 ul li a {
-  color: white;
-  text-decoration: none;
-  margin-right: 20px;
-}
-
-.nav-link-mouse-over {
-  color: gold !important;
-  transition: color 1s;
-}
-
-.nav-link-mouse-out {
-  color: white !important;
-  transition: color 1s;
-}
-
-/* #navigation-sublink-container {
-    border: 2px solid red;
-    display: grid;
-    grid-template-columns: 1fr 2fr 1fr;
-    margin: 0 5% 0 5%;
-  } */
-
-/* #products-navigation-dropdown-content {
-    position: relative;
-    left: 685px;
-    width: 80px;
-    background-color: black;
-    border: 2px solid red;
-    margin-top: 0;
-    margin-bottom: 0;
-    list-style-type: none;
-  } */
-
-#header-item3 {
-  font-family: "Kaushan Script", cursive;
-  display: grid;
-  justify-content: center;
-}
-
-#header-item3 ul li {
-  font-size: 20px;
+#header-item2 ul a {
   display: inline;
 }
 
-#header-item3 ul li a {
-  font-weight: bold;
+#header-container a {
   text-decoration: none;
   color: white;
-  margin-right: 20px;
-}
-
-.sign-up-log-in-mouse-over {
-  color: pink !important;
-  transition: color 1s;
-}
-
-.sign-up-log-in-mouse-out {
-  color: white !important;
-  transition: color 1s;
+  font-weight: bold;
 }
