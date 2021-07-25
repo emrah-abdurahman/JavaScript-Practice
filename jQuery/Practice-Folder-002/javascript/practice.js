@@ -20,8 +20,8 @@ $(".tab-list").each(function () {
       $tab = $link.parent().addClass("active"); // Make new tab active
     }
   });
-  console.log($this);
-  console.log($tab);
-  console.log($link);
-  console.log($panel);
+  console.log("$this:", $this);
+  console.log("$tab", $tab);
+  console.log("$link:", $link);
+  console.log("$panel:", $panel);
 });
