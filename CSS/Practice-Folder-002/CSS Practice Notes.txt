@@ -1,0 +1,4 @@
+This is practicing to style an HTML table with CSS.
+
+I am following the tutorial below:
+https://developer.mozilla.org/en-US/docs/Learn/CSS/Building_blocks/Styling_tables
