@@ -1,0 +1,5 @@
+This is code I've come across from a book called 'JavaScript: The Definitive Guide' by David Flanagan.
+
+I have copied it here to observe how it works during runtime in the browser DevTools in order to better understand it.
+
+This code is on pages 222 and 223 of the aforementioned book on Chapter 9: Classes.
