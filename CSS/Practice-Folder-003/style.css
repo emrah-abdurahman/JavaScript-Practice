@@ -112,6 +112,5 @@ a:active {
 
 a[href^="https://"]::after
 {
-  content: "";
-  background-image: url(external-link-52.png);
+  content: url(external-link-52.png);
 }
