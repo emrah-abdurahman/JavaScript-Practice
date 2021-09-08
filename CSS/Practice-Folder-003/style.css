@@ -48,3 +48,24 @@ footer {
 }
 
 /* WRITE YOUR CODE BELOW HERE */
+
+@font-face {
+  /* Serif font-face */
+  font-family: "Merriweather";
+  src: url("fonts/serif/Merriweather-Light.ttf") format("truetype");
+}
+
+@font-face {
+  /* Sans-Serif font-face */
+  font-family: "Open Sans";
+  src: url("fonts/sans-serif/OpenSans-Regular.ttf") format("truetype");
+}
+
+html {
+  font-family: Merriweather, serif;
+  font-size: 10px;
+}
+
+h2 {
+  font-family: "Open Sans";
+}
