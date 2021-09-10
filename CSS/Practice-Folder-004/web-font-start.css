@@ -1,3 +1,21 @@
+/* Web Fonts */
+
+@font-face {
+  font-family: "biorhymeregular";
+  src: url("web-fonts/biorhyme-regular-webfont.woff2") format("woff2"),
+    url("web-fonts/biorhyme-regular-webfont.woff") format("woff");
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "after_shokregular";
+  src: url("web-fonts/after_shok-webfont.woff2") format("woff2"),
+    url("web-fonts/after_shok-webfont.woff") format("woff");
+  font-weight: normal;
+  font-style: normal;
+}
+
 /* General setup */
 
 html {
@@ -22,8 +40,14 @@ h2 {
   font-size: 2.4rem;
 }
 
+h1,
+h2 {
+  font-family: after_shokregular;
+}
+
 p {
   font-size: 1.4rem;
   line-height: 1.6;
   word-spacing: 0.6rem;
+  font-family: "biorhymeregular";
 }
