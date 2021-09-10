@@ -1,0 +1,4 @@
+This is a web font practice as part of the active learning on MDN
+
+The link I am following is:
+https://developer.mozilla.org/en-US/docs/Learn/CSS/Styling_text/Web_fonts
