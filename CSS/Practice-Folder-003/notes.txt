@@ -1,0 +1,5 @@
+This is part of the MDN CSS activity after completing the styling text module.
+
+The link to this activity is below:
+
+https://developer.mozilla.org/en-US/docs/Learn/CSS/Styling_text/Typesetting_a_homepage
