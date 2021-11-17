@@ -46,10 +46,6 @@ body {
   height: 35px;
 }
 
-.logo:hover {
-  animation: moveInRight 1s ease-out;
-}
-
 .text-box {
   left: 50%;
   position: absolute;
