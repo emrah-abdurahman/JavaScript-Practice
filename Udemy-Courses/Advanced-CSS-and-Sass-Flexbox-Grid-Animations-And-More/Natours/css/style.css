@@ -46,16 +46,69 @@ body {
   height: 35px;
 }
 
+.logo:hover {
+  animation: moveInRight 1s ease-out;
+}
+
+.text-box {
+  left: 50%;
+  position: absolute;
+  top: 40%;
+  transform: translate(-50%, -50%);
+}
+
 .heading-primary {
+  backface-visibility: hidden;
   color: #fff;
   text-transform: uppercase;
 }
 
 .heading-primary-main {
+  animation-duration: 1s;
+  animation-name: moveInLeft;
+  animation-timing-function: ease-out;
   display: block;
   font-size: 60px;
+  font-weight: 400;
+  letter-spacing: 35px;
 }
 
 .heading-primary-sub {
+  animation: moveInRight 1s ease-out;
   display: block;
+  font-size: 20px;
+  font-weight: 700;
+  letter-spacing: 17.4px;
+}
+
+@keyframes moveInLeft {
+  0% {
+    opacity: 0;
+    transform: translateX(-100px);
+  }
+
+  80% {
+    transform: translateX(10px);
+  }
+
+  100% {
+    opacity: 1;
+    transform: translate(0);
+  }
+}
+
+@keyframes moveInRight {
+  0% {
+    opacity: 0;
+    transform: translateX(100px);
+  }
+
+  80% {
+    transform: translateX(-10px);
+  }
+
+  100% {
+    opacity: 1;
+    transform: translate(0);
+  }
 }
