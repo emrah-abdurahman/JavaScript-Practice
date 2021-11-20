@@ -7,8 +7,10 @@ Dark green: #28b485
 
 */
 
-* {
-  box-sizing: border-box;
+*,
+*::after,
+*::before {
+  box-sizing: inherit;
   padding: 0;
   margin: 0;
 }
@@ -18,6 +20,7 @@ html {
 }
 
 body {
+  box-sizing: border-box;
   color: #777;
   font-family: Lato, sans-serif;
   font-weight: 400;
