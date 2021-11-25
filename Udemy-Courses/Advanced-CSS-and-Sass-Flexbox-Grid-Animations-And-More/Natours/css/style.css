@@ -23,43 +23,38 @@ body {
   clip-path: polygon(0 0, 100% 0, 100% 75vh, 0 100%);
   height: 95vh;
   position: relative; }
-
-.header__logo-box {
-  left: 4rem;
-  position: absolute;
-  top: 4rem; }
-
-.header__logo {
-  height: 3.5rem; }
-
-.header__text-box {
-  left: 50%;
-  position: absolute;
-  top: 40%;
-  text-align: center;
-  transform: translate(-50%, -50%); }
+  .header__logo {
+    height: 3.5rem; }
+  .header__logo-box {
+    left: 4rem;
+    position: absolute;
+    top: 4rem; }
+  .header__text-box {
+    left: 50%;
+    position: absolute;
+    top: 40%;
+    text-align: center;
+    transform: translate(-50%, -50%); }
 
 .heading-primary {
   backface-visibility: hidden;
   color: #fff;
   margin-bottom: 6rem;
   text-transform: uppercase; }
-
-.heading-primary--main {
-  animation-duration: 1s;
-  animation-name: moveInLeft;
-  animation-timing-function: ease-out;
-  display: block;
-  font-size: 6rem;
-  font-weight: 400;
-  letter-spacing: 3.5rem; }
-
-.heading-primary--sub {
-  animation: moveInRight 1s ease-out;
-  display: block;
-  font-size: 2rem;
-  font-weight: 700;
-  letter-spacing: 1.75rem; }
+  .heading-primary--main {
+    animation-duration: 1s;
+    animation-name: moveInLeft;
+    animation-timing-function: ease-out;
+    display: block;
+    font-size: 6rem;
+    font-weight: 400;
+    letter-spacing: 3.5rem; }
+  .heading-primary--sub {
+    animation: moveInRight 1s ease-out;
+    display: block;
+    font-size: 2rem;
+    font-weight: 700;
+    letter-spacing: 1.75rem; }
 
 @keyframes moveInLeft {
   0% {
@@ -89,8 +84,7 @@ body {
     opacity: 1;
     transform: translate(0); } }
 
-.btn:link,
-.btn:visited {
+.btn:link, .btn:visited {
   border-radius: 10rem;
   display: inline-block;
   font-size: 1.6rem;
@@ -103,6 +97,9 @@ body {
 .btn:hover {
   box-shadow: 0 1rem 2rem rgba(0, 0, 0, 0.2);
   transform: translateY(-3px); }
+  .btn:hover::after {
+    opacity: 0;
+    transform: scaleX(1.4) scaleY(1.6); }
 
 .btn:active {
   box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.2);
@@ -111,6 +108,8 @@ body {
 .btn--white {
   background-color: #fff;
   color: #777; }
+  .btn--white::after {
+    background-color: #fff; }
 
 .btn::after {
   border-radius: 10rem;
@@ -123,13 +122,6 @@ body {
   transition: all 0.4s;
   width: 100%;
   z-index: -1; }
-
-.btn--white::after {
-  background-color: #fff; }
-
-.btn:hover::after {
-  opacity: 0;
-  transform: scaleX(1.4) scaleY(1.6); }
 
 .btn--animated {
   animation: moveInBottom 0.5s ease-out 0.75s;
