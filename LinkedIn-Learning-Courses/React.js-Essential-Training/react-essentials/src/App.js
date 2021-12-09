@@ -1,16 +1,15 @@
-import React from "react";
+import React, { useReducer } from "react";
 import "./App.css";
 
-function SecretComponent() {
-  return <h1>Secret information for authorized users only</h1>;
-}
+function App() {
+  const [checked, toggle] = useReducer((checked) => !checked, false);
 
-function RegularComponent() {
-  return <h1>Everyone can see this component.</h1>;
-}
-
-function App({ authorized }) {
-  return <>{authorized ? <SecretComponent /> : <RegularComponent />}</>;
+  return (
+    <>
+      <input type="checkbox" value={checked} onChange={toggle} />
+      <p>{checked ? "checked" : "not checked"}</p>
+    </>
+  );
 }
 
 export default App;
