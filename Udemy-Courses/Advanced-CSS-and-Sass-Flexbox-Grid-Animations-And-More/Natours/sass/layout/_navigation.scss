@@ -6,6 +6,7 @@
   &__button {
     background-color: $color-white;
     border-radius: 50%;
+    box-shadow: 0 1rem 3rem rgba($color-black, 0.1);
     height: 7rem;
     position: fixed;
     top: 6rem;
@@ -24,18 +25,21 @@
     position: fixed;
     top: 6.5rem;
     right: 6.5rem;
+    transition: transform 0.8s cubic-bezier(0.86, 0, 0.07, 1);
     width: 6rem;
     z-index: 1000;
 
-    transform: scale(80);
+    // transform: scale(80);
   }
 
   &__nav {
     height: 100vh;
+    left: 0;
+    opacity: 0;
     position: fixed;
     top: 0;
-    right: 0;
-    width: 100%;
+    transition: all 0.8s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+    width: 0;
     z-index: 1500;
   }
 
@@ -46,6 +50,7 @@
     text-align: center;
     top: 50%;
     transform: translate(-50%, -50%);
+    width: 100%;
   }
 
   &__item {
@@ -57,22 +62,40 @@
     &:visited {
       background-image: linear-gradient(
         120deg,
-        orangered 0%,
-        orangered 50%,
+        transparent 0%,
+        transparent 50%,
         $color-white 50%
       );
-      background-size: 100%;
+      background-size: 220%;
       color: $color-white;
+      display: inline-block;
       font-size: 3rem;
       font-weight: 300;
       padding: 1rem 2rem;
       text-decoration: none;
       text-transform: uppercase;
+      transition: all 0.4s;
+
+      span {
+        display: inline-block;
+        margin-right: 1rem;
+      }
     }
 
     &:hover,
     &:active {
       background-position: 100%;
+      color: $color-primary;
+      transform: translateX(1rem);
     }
+  }
+
+  &__checkbox:checked ~ &__background {
+    transform: scale(80);
+  }
+
+  &__checkbox:checked ~ &__nav {
+    opacity: 1;
+    width: 100%;
   }
 }
