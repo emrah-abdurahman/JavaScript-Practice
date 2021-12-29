@@ -90,6 +90,7 @@
     }
   }
 
+  // FUNCTIONALITY
   &__checkbox:checked ~ &__background {
     transform: scale(80);
   }
@@ -97,5 +98,33 @@
   &__checkbox:checked ~ &__nav {
     opacity: 1;
     width: 100%;
+  }
+
+  // ICON
+  &__icon {
+    position: relative;
+
+    &,
+    &::before,
+    &::after {
+      background-color: $color-grey-dark-3;
+      display: inline-block;
+      height: 2px;
+      width: 3rem;
+    }
+
+    &::before,
+    &::after {
+      content: "";
+      left: 0;
+      position: absolute;
+    }
+
+    &::before {
+      top: -1rem;
+    }
+    &::after {
+      top: 1rem;
+    }
   }
 }
