@@ -34,6 +34,43 @@ body {
   line-height: 1.6;
   min-height: 100vh; }
 
+.logo {
+  height: 3.25rem;
+  margin-left: 3rem; }
+
+.search {
+  background-color: orangered;
+  flex: 0 0 40%; }
+  .search__input {
+    background-color: var(--color-grey-light-2);
+    border: none;
+    border-radius: 100px;
+    color: inherit;
+    font-family: inherit;
+    font-size: inherit;
+    padding: 0.7rem 2rem;
+    transition: all 0.2s;
+    width: 90%; }
+    .search__input:focus {
+      background-color: var(--color-grey-light-3);
+      outline: none;
+      width: 100%; }
+  .search__button {
+    background-color: var(--color-grey-light-2);
+    border: none; }
+  .search__icon {
+    height: 2rem;
+    width: 2rem; }
+
+.user-nav {
+  background-color: greenyellow; }
+  .user-nav__icon {
+    height: 2.25rem;
+    width: 2.25rem; }
+  .user-nav__user-photo {
+    border-radius: 50%;
+    height: 3.75rem; }
+
 .container {
   background-color: var(--color-grey-light-1);
   box-shadow: var(--shadow-dark);
@@ -42,9 +79,12 @@ body {
   min-height: 50rem; }
 
 .header {
+  align-items: center;
   background-color: #fff;
   border-bottom: var(--color-grey-light-2);
-  height: 7rem; }
+  display: flex;
+  height: 7rem;
+  justify-content: space-between; }
 
 .content {
   display: flex; }
