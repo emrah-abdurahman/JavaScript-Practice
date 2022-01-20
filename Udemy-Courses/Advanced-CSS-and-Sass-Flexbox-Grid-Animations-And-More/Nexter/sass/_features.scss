@@ -1,4 +1,23 @@
 .features {
-  background-color: $color-grey-light-2;
+  display: grid;
   grid-column: center-start / center-end;
+  grid-gap: 6rem;
+  grid-template-columns: repeat(3, 1fr);
+  margin: 15rem 0;
+}
+
+.feature {
+  display: grid;
+  grid-template-columns: min-content 1fr;
+
+  &__icon {
+    fill: $color-primary;
+    grid-row: 1 / span 2;
+    height: 4.5rem;
+    width: 4.5rem;
+  }
+
+  &__text {
+    font-size: 1.7rem;
+  }
 }
