@@ -6,6 +6,16 @@
 
   &__content {
     background-color: $color-grey-light-1;
+    display: flex;
+    flex-direction: column;
     grid-column: col-start 5 / full-end;
+    justify-content: center;
+    padding: 6rem 12rem;
+  }
+
+  &__text {
+    font-size: 1.5rem;
+    font-style: italic;
+    margin-bottom: 4rem;
   }
 }
